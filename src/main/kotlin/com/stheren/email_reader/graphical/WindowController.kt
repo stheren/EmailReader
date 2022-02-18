@@ -2,6 +2,7 @@ package com.stheren.email_reader.graphical
 
 import com.stheren.email_reader.engine.Reader
 import com.stheren.email_reader.engine.data.Email
+import com.stheren.email_reader.engine.data.Sender
 import javafx.event.EventHandler
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
@@ -22,6 +23,8 @@ class WindowController : Initializable {
 
     val  r = Reader("Inbox")
 
+    lateinit var user : Sender
+
     @FXML
     lateinit var EMAIL_LIST: VBox
     lateinit var DISPLAY: AnchorPane
@@ -33,8 +36,6 @@ class WindowController : Initializable {
 
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
-        refreshEmailList()
-
         SYNCHRONIZE_BTN.onMouseEntered = EventHandler {
             SYNCHRONIZE_BTN.style += "-fx-background-color: #DCDCDC;"
         }
@@ -44,7 +45,6 @@ class WindowController : Initializable {
         SYNCHRONIZE_BTN.onMouseClicked = EventHandler {
             refreshEmailList()
         }
-
     }
 
     fun printToDisplayPart(e : Email){
@@ -70,7 +70,6 @@ class WindowController : Initializable {
             ScrollPane(VBox().also { body ->
                 body.isFillWidth = true
                 body.children.add(Text(e.content).also { content ->
-                    println(body.width)
                     content.wrappingWidth = 600.0
                 })
             }).also { scrolling ->
@@ -90,6 +89,7 @@ class WindowController : Initializable {
         ITEMS_COUNT.text = "Items : ${r.List_Email.count()}"
         NOT_READ.text = "Not Read : ${r.List_Email.count()}"
         for (e in r.List_Email) {
+            if(e.metadata.sender.mail != user.mail && e.metadata.receiver != user.mail) continue
             EMAIL_LIST.spacing = 10.0
             EMAIL_LIST.children.add(
                 VBox().also { mail ->
