@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.stheren.email_reader.graphical.WindowController">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                prefHeight="15.0" style="-fx-background-color: #106EBE;" AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Text fill="WHITE" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items : ???"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" fx:id="ITEMS_COUNT"/>
+        <Text fill="WHITE" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not Read : ???"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="0.0" fx:id="NOT_READ"/>
+    </AnchorPane>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0">
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="40.0" style="-fx-border-color: BLACK;" AnchorPane.bottomAnchor="5.0"
+              AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@icons8_new_message_96px_3.png"/>
+            </ImageView>
+            <Text layoutX="52.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Email">
+                <font>
+                    <Font name="Monospaced Bold" size="20.0"/>
+                </font>
+            </Text>
+        </Pane>
+        <Pane layoutX="176.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="40.0" style="-fx-border-color: BLACK;" fx:id="SYNCHRONIZE_BTN">
+            <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@icons8_synchronize_96px.png"/>
+            </ImageView>
+            <Text layoutX="52.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Synchronize">
+                <font>
+                    <Font name="Monospaced Bold" size="20.0"/>
+                </font>
+            </Text>
+        </Pane>
+    </AnchorPane>
+    <SplitPane dividerPositions="0.29797979797979796" layoutX="143.0" layoutY="107.0" prefHeight="160.0"
+               prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <AnchorPane>
+            <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <VBox AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+                      fx:id="EMAIL_LIST"/>
+            </ScrollPane>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" fx:id="DISPLAY">
+
+        </AnchorPane>
+    </SplitPane>
+</AnchorPane>

@@ -1,0 +1,28 @@
+{
+  "_id": "e40377c7-1810-9aae-7efb-3399fa82eb3c",
+  "metadata": {
+    "sender": {
+      "name": "Silvain",
+      "lastName": "Therene",
+      "account": "stheren",
+      "mail": "silvain.therene@u-psud.fr"
+    },
+    "receiver": "julien.save@u-psud.fr",
+    "subject": "Je veux un café !",
+    "date": "2022-12-27T00:00:00.0Z",
+    "categories": [
+      "Pause",
+      "Argent",
+      "Spam"
+    ]
+  },
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum libero elementum arcu vulputate, quis iaculis tellus suscipit. Proin finibus risus quis mi sollicitudin, vitae dapibus risus semper. Cras dapibus velit justo, quis aliquet diam tincidunt vel. Nulla facilisi. Etiam id interdum tortor. Nam egestas pretium rhoncus. Nullam dignissim velit augue, eget molestie erat eleifend a. Praesent a accumsan nibh. Fusce suscipit felis sem, a facilisis eros facilisis et. Suspendisse a mollis metus. Nunc suscipit venenatis nisi nec egestas.\nSed dictum nibh libero, vel ultricies nulla semper viverra. Fusce sed interdum lacus, vitae eleifend mauris. Maecenas eleifend lacus sed malesuada blandit. Mauris eu malesuada ligula, ac tempus nibh. Quisque ut finibus velit, nec ornare leo. Quisque a fringilla urna, dictum hendrerit neque. Pellentesque commodo vel purus ultrices aliquet. Etiam semper nulla ante, ultricies finibus mi euismod a. Sed eu ornare magna, a ornare nibh. Donec sed justo ac massa mattis placerat. Cras non gravida mi.\nNunc eu ipsum convallis, lacinia lorem ut, placerat erat. Mauris dignissim lobortis eleifend. Vivamus sit amet nisi sed dolor suscipit elementum. Sed lectus erat, pellentesque at purus sit amet, eleifend imperdiet nisl. Praesent elementum dui dui, quis commodo nunc varius ac. Duis vestibulum orci ac viverra sodales. Suspendisse molestie est nulla, ut tempus tellus cursus id. Duis placerat dictum rhoncus. Sed laoreet ullamcorper felis vitae imperdiet. Integer placerat magna a dignissim tincidunt. Phasellus cursus aliquet ultrices.\nDuis aliquam ante odio, at rhoncus sem maximus a. Sed vel odio mi. Pellentesque consectetur aliquet libero vitae luctus. Phasellus sed augue ipsum. Nunc quam lorem, vestibulum suscipit molestie eu, consectetur non lectus. Nullam lobortis eu neque ut efficitur. Etiam cursus eros risus, eget ultrices quam imperdiet ac. Mauris ut sodales sem. Sed congue dolor non libero lacinia, id eleifend ligula convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent vitae eros molestie, blandit neque non, condimentum nisl. Quisque vulputate turpis velit, nec placerat elit finibus vitae. Cras et maximus dolor, non egestas orci.\nNullam non velit vitae mauris molestie efficitur. Phasellus commodo commodo lacus, eu lacinia nunc sollicitudin quis. Mauris nec vulputate leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus sit amet augue velit. Aenean cursus pretium euismod. Nulla nec leo elit.",
+  "extentions": [
+    {
+      "name": "nisi",
+      "_id": "40968f40-49fa-9152-2c7d-fc07883e26f0",
+      "reference": "officia Ut deserunt laboris",
+      "version": "mollit deserunt ipsum sed labore"
+    }
+  ]
+}

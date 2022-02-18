@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "name": "Core Mail",
+  "version": "1.0.0",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "uid RFC4122"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "sender": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "account": {
+              "type": "string"
+            },
+            "mail": {
+              "type": "string",
+              "format": "email"
+            }
+          },
+          "required": ["name", "lastName", "account", "mail"]
+        },
+        "receiver": {
+          "type": "string",
+          "format": "email"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "example": "SPORT"
+          }
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2018-11-13T20:20:39+00:00",
+          "description": "ISO8601"
+        }
+      },
+      "required": ["sender", "receiver", "subject", "date"]
+    },
+    "content": {
+      "type": "string"
+    },
+    "history": {
+      "type": "string",
+      "format": "uuid",
+      "example": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a"
+    },
+    "extentions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "example": "XX.xx.xx"
+          }
+        },
+        "required": ["name", "_id", "reference", "version"]
+      }
+    }
+  },
+  "required": ["_id", "metadata", "content"]
+}
