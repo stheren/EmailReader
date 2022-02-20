@@ -75,7 +75,7 @@
             "format": "uuid"
           },
           "reference": {
-            "type": "string"
+            "type": "object"
           },
           "version": {
             "type": "string",

@@ -21,11 +21,11 @@ class Window : Application(){
         primaryStage.icons.add(Image(javaClass.getResourceAsStream("/icons8_outlook_calendar_96px.png")))
         primaryStage.show()
 
-        connexionController.process = { name, lastname, account ,email ->
+        connexionController.process = { User ->
             val fxmlMainLoader = FXMLLoader(javaClass.getResource("/AppTemplate.fxml"))
             val mainScene = fxmlMainLoader.load<Any>() as AnchorPane
             val mainController = fxmlMainLoader.getController() as WindowController
-            mainController.user = Sender(name, lastname, account, email)
+            mainController.user = User
             mainController.refreshEmailList()
 
             primaryStage.scene = Scene(mainScene, mainScene.prefWidth, mainScene.prefHeight)

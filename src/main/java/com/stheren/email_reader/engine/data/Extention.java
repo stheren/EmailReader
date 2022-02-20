@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import javax.annotation.processing.Generated;
 
@@ -43,7 +44,7 @@ public class Extention {
      * 
      */
     @JsonProperty("reference")
-    private String reference;
+    private JsonNode reference;
     /**
      * 
      * (Required)
@@ -68,7 +69,7 @@ public class Extention {
      * @param id
      * @param version
      */
-    public Extention(String name, UUID id, String reference, String version) {
+    public Extention(String name, UUID id, JsonNode reference, String version) {
         super();
         this.name = name;
         this.id = id;
@@ -122,7 +123,7 @@ public class Extention {
      * 
      */
     @JsonProperty("reference")
-    public String getReference() {
+    public JsonNode getReference() {
         return reference;
     }
 
@@ -132,7 +133,7 @@ public class Extention {
      * 
      */
     @JsonProperty("reference")
-    public void setReference(String reference) {
+    public void setReference(JsonNode reference) {
         this.reference = reference;
     }
 
