@@ -86,8 +86,8 @@ class WindowController : Initializable {
     fun refreshEmailList(){
         r.synchronize()
         EMAIL_LIST.children.clear()
-        ITEMS_COUNT.text = "Items : ${r.List_Email.count()}"
-        NOT_READ.text = "Not Read : ${r.List_Email.count()}"
+        ITEMS_COUNT.text = "Items : ${r.List_Email.count {e -> e.metadata.sender.mail == user.mail || e.metadata.receiver == user.mail }}"
+        NOT_READ.text = "Not Read : ${r.List_Email.count{ e-> e.metadata.receiver == user.mail }}"
         for (e in r.List_Email) {
             if(e.metadata.sender.mail != user.mail && e.metadata.receiver != user.mail) continue
             EMAIL_LIST.spacing = 10.0
