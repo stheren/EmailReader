@@ -7,4 +7,5 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: cd ${{ github.workspace }}
+      - run: chmod +x gradlew
       - run: ./gradlew build
