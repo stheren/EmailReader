@@ -5,5 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: cd ${{ github.workspace }}
-      - run: echo `ls`
-      - run: ./gradlew build
+      - run: ls .
