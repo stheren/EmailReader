@@ -1,0 +1,37 @@
+{
+  "_id": "b852a9a4-27df-4b42-9a53-2cca0f61e44e",
+  "metadata": {
+    "sender": {
+      "name": "Silvain",
+      "lastName": "Therene",
+      "account": "stheren",
+      "mail": "silvain.therene@u-psud.fr"
+    },
+    "receiver": "julien.save@u-psud.fr",
+    "subject": "Je veux un café !",
+    "categories": [
+      "Sport",
+      "Other"
+    ],
+    "date": "2022-02-21T16:02:49.556Z"
+  },
+  "content": "<html dir=\"ltr\"><head></head><body contenteditable=\"true\"><br><br><br>\nBest regards,\n<br><br>\nSilvain Therene\n<br>\nsilvain.therene@u-psud.fr</body></html>",
+  "extentions": [
+    {
+      "name": "Color",
+      "_id": "40968f40-49fa-9132-2c7d-fc07883e26f0",
+      "reference": {
+        "Color": "0x00ff00ff"
+      },
+      "version": "0.0.1"
+    },
+    {
+      "name": "IsReaded",
+      "_id": "40968f40-49fa-9152-2c7d-fc07483e26f9",
+      "reference": {
+        "IsRead": false
+      },
+      "version": "0.0.1"
+    }
+  ]
+}

@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import com.stheren.email_reader.graphical.ButtonPane?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
             prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.stheren.email_reader.graphical.WindowController">
@@ -19,9 +20,9 @@
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
                 prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
                 AnchorPane.topAnchor="0.0">
-        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-              prefHeight="40.0" style="-fx-border-color: BLACK;" AnchorPane.bottomAnchor="5.0"
-              AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <ButtonPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="40.0" AnchorPane.bottomAnchor="5.0"
+                    AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" fx:id="NEWMAIL_BTN">
             <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@icons8_new_message_96px_3.png"/>
             </ImageView>
@@ -30,9 +31,9 @@
                     <Font name="Monospaced Bold" size="20.0"/>
                 </font>
             </Text>
-        </Pane>
-        <Pane layoutX="176.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-              minWidth="-Infinity" prefHeight="40.0" style="-fx-border-color: BLACK;" fx:id="SYNCHRONIZE_BTN">
+        </ButtonPane>
+        <ButtonPane layoutX="176.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="40.0" fx:id="SYNCHRONIZE_BTN">
             <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@icons8_synchronize_96px.png"/>
             </ImageView>
@@ -41,7 +42,7 @@
                     <Font name="Monospaced Bold" size="20.0"/>
                 </font>
             </Text>
-        </Pane>
+        </ButtonPane>
     </AnchorPane>
     <SplitPane dividerPositions="0.29797979797979796" layoutX="143.0" layoutY="107.0" prefHeight="160.0"
                prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0"

@@ -1,7 +1,7 @@
 package com.stheren.email_reader.engine
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.stheren.email_reader.engine.data.Email
+import com.stheren.email_reader.data.Email
 import net.pwall.json.schema.JSONSchema
 import java.io.File
 import java.nio.file.Files

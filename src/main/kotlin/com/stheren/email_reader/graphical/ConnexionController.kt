@@ -1,9 +1,8 @@
 package com.stheren.email_reader.graphical
 
-import com.fasterxml.jackson.core.JsonFactory
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.stheren.email_reader.engine.data.Sender
+import com.stheren.email_reader.data.Sender
 import javafx.event.EventHandler
 import javafx.fxml.FXML
 import javafx.fxml.Initializable

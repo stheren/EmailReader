@@ -1,0 +1,18 @@
+{
+  "_id": "a70a9f92-377c-43b0-a84c-8463cc21f6ab",
+  "metadata": {
+    "sender": {
+      "name": "Silvain",
+      "lastName": "Therene",
+      "account": "stheren",
+      "mail": "silvain.therene@u-psud.fr"
+    },
+    "receiver": "silvain.therene@gmail.com",
+    "subject": "Bonjour",
+    "categories": [
+      "Sport"
+    ],
+    "date": "2022-02-21T15:51:50.370Z"
+  },
+  "content": "<html dir=\"ltr\"><head></head><body contenteditable=\"true\"><h1><span style=\"font-family: &quot;&quot;; font-size: xx-large;\">Hey,</span></h1><p><span style=\"font-weight: bold; font-family: &quot;&quot;; font-style: italic; text-decoration: underline;\">Comment vas tu ?</span></p><p><br></p><p>Best regards,&nbsp;</p><br>\nSilvain Therene\n<br>\nsilvain.therene@u-psud.fr</body></html>"
+}

@@ -29,7 +29,12 @@
               "format": "email"
             }
           },
-          "required": ["name", "lastName", "account", "mail"]
+          "required": [
+            "name",
+            "lastName",
+            "account",
+            "mail"
+          ]
         },
         "receiver": {
           "type": "string",
@@ -52,7 +57,12 @@
           "description": "ISO8601"
         }
       },
-      "required": ["sender", "receiver", "subject", "date"]
+      "required": [
+        "sender",
+        "receiver",
+        "subject",
+        "date"
+      ]
     },
     "content": {
       "type": "string"
@@ -82,9 +92,18 @@
             "example": "XX.xx.xx"
           }
         },
-        "required": ["name", "_id", "reference", "version"]
+        "required": [
+          "name",
+          "_id",
+          "reference",
+          "version"
+        ]
       }
     }
   },
-  "required": ["_id", "metadata", "content"]
+  "required": [
+    "_id",
+    "metadata",
+    "content"
+  ]
 }

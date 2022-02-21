@@ -7,9 +7,9 @@ plugins {
     id("org.openjfx.javafxplugin")
 }
 
-val javalinVersion: String by project
-val slf4jVersion: String by project
 val jacksonVersion: String by project
+val schemaVersion: String by project
+val UUIDVersion: String by project
 
 repositories {
     mavenCentral()
@@ -17,8 +17,8 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("net.pwall.json:json-kotlin-schema:0.31")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
+    implementation("net.pwall.json:json-kotlin-schema:$schemaVersion")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 }
 
 javafx {

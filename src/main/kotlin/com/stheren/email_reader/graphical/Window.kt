@@ -1,6 +1,5 @@
 package com.stheren.email_reader.graphical
 
-import com.stheren.email_reader.engine.data.Sender
 import javafx.application.Application
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
@@ -25,6 +24,7 @@ class Window : Application(){
             val fxmlMainLoader = FXMLLoader(javaClass.getResource("/AppTemplate.fxml"))
             val mainScene = fxmlMainLoader.load<Any>() as AnchorPane
             val mainController = fxmlMainLoader.getController() as WindowController
+            mainController.parentStage = primaryStage
             mainController.user = User
             mainController.refreshEmailList()
 
