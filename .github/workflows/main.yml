@@ -4,4 +4,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: ${{ github.workspace }}/gradlew build
+      - run: cd ${{ github.workspace }}
+      - run: ls
+      - run: ./gradlew build
