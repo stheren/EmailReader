@@ -1,18 +1,9 @@
 name: Email Reader Build
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  validation:
+    name: "Validation"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up JDK 11
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@2debee19271e1b82c6e41137d78e44e6e841035230a1a169ca47fd3fb09ed87b
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@2debee19271e1b82c6e41137d78e44e6e841035230a1a169ca47fd3fb09ed87b
-        with:
-          arguments: build
+      - uses: gradle/wrapper-validation-action@v1
