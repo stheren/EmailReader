@@ -10,4 +10,4 @@
 ## Getting start
 
 ### Issues
-see also [#1](/../../issues/1)
+Thank to [zpaul91](https://github.com/zpaul91) for [Wrong nb mails #1](https://github.com/stheren/EmailReader/issues/1)
