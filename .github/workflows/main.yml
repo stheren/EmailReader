@@ -6,7 +6,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - run: apt install openjdk-11-jre-headless
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '11'
       - run: cd ${{ github.workspace }}
       - run: chmod +x gradlew
-#      - run: ./gradlew --stacktrace build
+      - run: ./gradlew --stacktrace build
