@@ -24,3 +24,6 @@
 ## Information
 
 ## Getting start
+
+### Issues
+Thank to [zpaul91](https://github.com/zpaul91) for [Wrong nb mails #1](https://github.com/stheren/EmailReader/issues/1)
