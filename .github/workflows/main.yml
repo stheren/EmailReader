@@ -12,5 +12,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      - name: Allow permission to gradlew
+        run: chmod +x gradlew
       - name: Build project
         run: ./gradlew build
