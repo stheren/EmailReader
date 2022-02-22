@@ -4,12 +4,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
           java-version: '11'
-      - run: cd ${{ github.workspace }}
-      - run: chmod +x gradlew
-      - run: ./gradlew --stacktrace build
+          cache: 'gradle'
+      - run: ./gradlew build --no-daemon
