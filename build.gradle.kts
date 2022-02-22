@@ -9,7 +9,6 @@ plugins {
 
 val jacksonVersion: String by project
 val schemaVersion: String by project
-val UUIDVersion: String by project
 
 repositories {
     mavenCentral()
