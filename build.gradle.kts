@@ -18,6 +18,9 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation("net.pwall.json:json-kotlin-schema:$schemaVersion")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
+    implementation("junit:junit:4.13.1")
+
+    testImplementation(kotlin("test"))
 }
 
 javafx {
@@ -32,4 +35,8 @@ tasks.getByName<ShadowJar>("shadowJar") {
     archiveClassifier.set("fat")
     archiveVersion.set(project.version.toString())
     archiveBaseName.set(project.name)
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
