@@ -2,8 +2,10 @@ package com.stheren.email_reader.graphical
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.stheren.email_reader.GLOBAL_VARIABLE
+import com.stheren.email_reader.GLOBAL_VARIABLE.EMAIL_REGEX
 import com.stheren.email_reader.data.Email
 import com.stheren.email_reader.data.*
+import com.stheren.email_reader.engine.Writer
 import javafx.application.Platform
 import javafx.event.EventHandler
 import javafx.fxml.FXML
@@ -20,9 +22,6 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 class WriteEmailController : Initializable {
-    private val EmailRegex =
-        """(?:[a-z0-9!#${'$'}%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#${'$'}%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])""".toRegex()
-
     @FXML
     lateinit var BTN_SEND: ButtonPane
 
@@ -53,6 +52,8 @@ class WriteEmailController : Initializable {
             """.trimIndent()
         }
 
+    var history: UUID? = null
+
     override fun initialize(location: URL?, resources: ResourceBundle?) {
         BTN_SEND.onMouseClicked = EventHandler {
             if (validateField()) {
@@ -80,8 +81,9 @@ class WriteEmailController : Initializable {
                         "0.0.1"
                     ),
                 )
+                e.history = history
 
-                ObjectMapper().writeValue(File("Inbox/${e.id}.json"), e);
+                Writer.write(e)
                 (BTN_SEND.scene.window as Stage).close()
             }
         }
@@ -101,7 +103,7 @@ class WriteEmailController : Initializable {
         return if (receiverField.text.isEmpty()) {
             receiverError.text = "E-mail is required here."
             false
-        } else if (!EmailRegex.matches(receiverField.text)) {
+        } else if (!EMAIL_REGEX.matches(receiverField.text)) {
             receiverError.text = "The email is not in the right format."
             false
         } else {

@@ -2,6 +2,7 @@ package com.stheren.email_reader.graphical
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.stheren.email_reader.GLOBAL_VARIABLE
 import com.stheren.email_reader.data.Sender
 import javafx.event.EventHandler
 import javafx.fxml.FXML
@@ -19,8 +20,6 @@ class ConnexionController : Initializable {
     lateinit var User : Sender
 
     lateinit var process: (Sender) -> Unit
-
-    private val EmailRegex = """(?:[a-z0-9!#${'$'}%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#${'$'}%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])""".toRegex()
 
     @FXML
     lateinit var nameField : TextField
@@ -61,7 +60,7 @@ class ConnexionController : Initializable {
                 return@EventHandler
             }
 
-            if(!EmailRegex.matches(emailField.text)){
+            if(!GLOBAL_VARIABLE.EMAIL_REGEX.matches(emailField.text)){
                 emailText.text = "Email is not with the good format !"
                 return@EventHandler
             }
