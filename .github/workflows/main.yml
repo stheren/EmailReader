@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
+      - run: apt install openjdk-11-jre-headless
       - run: cd ${{ github.workspace }}
       - run: chmod +x gradlew
 #      - run: ./gradlew --stacktrace build
