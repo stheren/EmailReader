@@ -8,3 +8,6 @@
 ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
 ## Getting start
+
+### Issues
+see also [#1](/../../issues/1)
